@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#123456"
+        android:gravity="center"
+        android:text="更多娱乐"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/iv_weather"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:onClick="doClick"
+        android:padding="8dp"
+        android:src="@drawable/weather" />
+
+    <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/iv_weather"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/iv_weather"
+        android:onClick="doClick"
+        android:padding="8dp"
+        android:src="@drawable/picture" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/iv_weather"
+        android:layout_below="@+id/iv_weather"
+        android:gravity="center_horizontal"
+        android:text="天气预报" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/iv_picture"
+        android:layout_alignRight="@+id/iv_picture"
+        android:layout_below="@+id/iv_picture"
+        android:gravity="center_horizontal"
+        android:text="图库" />
+
+    <ImageView
+        android:id="@+id/iv_erweima"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/textView3"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/iv_picture"
+        android:padding="8dp"
+        android:onClick="doClick"
+        android:src="@drawable/details" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/iv_erweima"
+        android:layout_alignRight="@+id/iv_erweima"
+        android:layout_below="@+id/iv_erweima"
+        android:gravity="center_horizontal"
+        android:text="二维码" />
+
+</RelativeLayout>

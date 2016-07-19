@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_jokes_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="3dp"
+        android:text="作者"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_jokes_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_jokes_author"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="3dp"
+        android:text="xiaohua"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/iv_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_jokes_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/share12" />
+
+    <Button
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/iv_jokes_pic"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/holo_blue_light" />
+
+    <com.yanglijun.news_v1.util.ZoomImageView
+        android:id="@+id/iv_jokes_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_jokes_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_launcher" />
+
+</RelativeLayout>
