@@ -43,7 +43,8 @@
         
         <activity android:name="zxing.activity.CaptureActivity"></activity>
         <activity android:name="zxing.activity.QcodeActivity"></activity>
-        <activity android:name="com.yanglijun.news_v1.activity.ShareApkActivity"></activity>
+        <activity android:name="shareapk.view.ShareApkMainActivity"></activity>
+        
     </application>
 
 </manifest>

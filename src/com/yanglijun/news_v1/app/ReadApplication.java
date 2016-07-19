@@ -1,7 +1,5 @@
 package com.yanglijun.news_v1.app;
 
-import android.app.Application;
-
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -10,22 +8,27 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 
+import android.app.Application;
+
 /**
  * Created by yanglijun 2016-6-25ÏÂÎç4:13:46
  */
 public class ReadApplication extends Application {
 
-	ReadApplication readApplication;
+	private static ReadApplication readApplication;
 
 	public ReadApplication() {
 		super();
-		this.readApplication = readApplication;
+	
 	}
 
+	public static ReadApplication getreadApplication(){
+		return readApplication;
+	}
 	@Override
 	public void onCreate() {
-
 		super.onCreate();
+		 readApplication=this;
 		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
 				this)
 				// .memoryCacheExtraOptions(480, 800)

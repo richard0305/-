@@ -76,4 +76,26 @@
         android:gravity="center_horizontal"
         android:text="二维码" />
 
+    <ImageView
+        android:id="@+id/iv_share_apk"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="18dp"
+        android:layout_toLeftOf="@+id/iv_picture"
+        android:onClick="doClick"
+        android:padding="8dp"
+        android:src="@drawable/shareapk" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/iv_share_apk"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/iv_share_apk"
+        android:gravity="center_horizontal"
+        android:text="分享软件" />
+
 </RelativeLayout>

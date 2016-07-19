@@ -13,11 +13,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import shareapk.view.ShareApkMainActivity;
 
 public class MoreFragment extends Fragment{
 	private ImageView ivWeather;
 	private ImageView ivPicture;
 	private ImageView iverweima;
+	private ImageView ivShareApk;
+	
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,6 +42,16 @@ public class MoreFragment extends Fragment{
 				
 			}
 		});
+		ivShareApk.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent=new Intent(getActivity(), ShareApkMainActivity.class);
+				startActivity(intent);
+				
+			}
+		});
+		
 		
 	}
 
@@ -47,6 +60,7 @@ public class MoreFragment extends Fragment{
 		ivPicture=(ImageView) view.findViewById(R.id.iv_picture);
 		ivWeather=(ImageView) view.findViewById(R.id.iv_weather);
 		iverweima=(ImageView) view.findViewById(R.id.iv_erweima);
+		ivShareApk=(ImageView) view.findViewById(R.id.iv_share_apk);
 	}
 
 
@@ -61,10 +75,7 @@ public class MoreFragment extends Fragment{
 			Intent intent2=new Intent(getActivity(),PictureActivity.class);
 			startActivity(intent2);
 			break;
-		case R.id.iv_erweima:
-			Log.i("yanglijun1212121", "wodianjile zhge ");
-			
-			break;
+		
 		}
 	}
 	
