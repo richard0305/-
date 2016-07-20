@@ -9,6 +9,47 @@ package com.yanglijun.news_v1;
 
 public final class R {
     public static final class attr {
+        /**  Class name of the Layout Manager to be used.
+        <p/>
+        The class must extend android.support.v7.widget.RecyclerView$LayoutManager
+        and have either a default constructor or constructor with the signature
+        (android.content.Context, android.util.AttributeSet, int, int).
+         <p/>
+         If the name starts with a '.', application package is prefixed.
+         Else, if the name contains a '.', the classname is assumed to be a full class name.
+         Else, the recycler view package name (android.support.v7.widget) is prefixed. 
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int layoutManager=0x7f010000;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int reverseLayout=0x7f010002;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int spanCount=0x7f010001;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stackFromEnd=0x7f010003;
     }
     public static final class color {
         public static final int tab_checked=0x7f080000;
@@ -26,8 +67,14 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f050003;
+        public static final int activity_vertical_margin=0x7f050004;
+        /**  The max amount of scroll ItemTouchHelper will trigger if dragged view is out of
+    RecyclerView's bounds.
+         */
+        public static final int item_touch_helper_max_drag_scroll_per_frame=0x7f050000;
+        public static final int item_touch_helper_swipe_escape_max_velocity=0x7f050002;
+        public static final int item_touch_helper_swipe_escape_velocity=0x7f050001;
     }
     public static final class drawable {
         public static final int cloudy_weather=0x7f020000;
@@ -69,114 +116,133 @@ public final class R {
         public static final int wind1=0x7f020024;
     }
     public static final class id {
-        public static final int action_settings=0x7f060050;
-        public static final int books=0x7f060014;
-        public static final int btn_line=0x7f060049;
-        public static final int button1=0x7f06000f;
-        public static final int capture_container=0x7f060007;
-        public static final int capture_crop_view=0x7f060009;
-        public static final int capture_mask_bottom=0x7f06000b;
-        public static final int capture_mask_left=0x7f06000c;
-        public static final int capture_mask_right=0x7f06000d;
-        public static final int capture_mask_top=0x7f060008;
-        public static final int capture_preview=0x7f060006;
-        public static final int capture_scan_line=0x7f06000a;
-        public static final int decode=0x7f060000;
-        public static final int decode_failed=0x7f060001;
-        public static final int decode_succeeded=0x7f060002;
-        public static final int imageView1=0x7f060031;
-        public static final int imageview=0x7f06004c;
-        public static final int iv_acquired_day_weather=0x7f060024;
-        public static final int iv_acquired_night_weather=0x7f060027;
-        public static final int iv_city_menu=0x7f06002a;
-        public static final int iv_erweima=0x7f060040;
-        public static final int iv_jokes_pic=0x7f060039;
-        public static final int iv_picture=0x7f06003d;
-        public static final int iv_share=0x7f060037;
-        public static final int iv_share_apk=0x7f060042;
-        public static final int iv_today_weather=0x7f06002c;
-        public static final int iv_tomorrow_day_weather=0x7f06001c;
-        public static final int iv_tomorrow_night_weather=0x7f06001f;
-        public static final int iv_weather=0x7f06003c;
-        public static final int iv_weather_share=0x7f06002b;
-        public static final int iv_welcome=0x7f060034;
-        public static final int jokes=0x7f060013;
-        public static final int linearLayout1=0x7f060019;
-        public static final int listview=0x7f06004b;
-        public static final int ll_news_1=0x7f060045;
-        public static final int lv_joke=0x7f06003a;
-        public static final int lv_news_item=0x7f06004a;
-        public static final int more=0x7f060015;
-        public static final int movies=0x7f060012;
-        public static final int news=0x7f060011;
-        public static final int quit=0x7f060003;
-        public static final int restart_preview=0x7f060004;
-        public static final int return_scan_result=0x7f060005;
-        public static final int rg_control=0x7f060010;
-        public static final int rl_weather_bac=0x7f060017;
-        public static final int size=0x7f06004e;
-        public static final int textView1=0x7f06003b;
-        public static final int textView2=0x7f06003e;
-        public static final int textView3=0x7f06003f;
-        public static final int textView4=0x7f060041;
-        public static final int textView5=0x7f060043;
-        public static final int time=0x7f06004f;
-        public static final int title=0x7f06004d;
-        public static final int tv=0x7f06000e;
-        public static final int tv2=0x7f060038;
-        public static final int tv_Acquired=0x7f060022;
-        public static final int tv_Tomorrow=0x7f06001a;
-        public static final int tv_acquired_day_temperature=0x7f060025;
-        public static final int tv_acquired_night_temperature=0x7f060026;
-        public static final int tv_acquired_night_weather=0x7f060028;
-        public static final int tv_acquired_weather=0x7f060023;
-        public static final int tv_acquired_wind=0x7f060029;
-        public static final int tv_county=0x7f060018;
-        public static final int tv_jokes_author=0x7f060035;
-        public static final int tv_jokes_content=0x7f060036;
-        public static final int tv_news_source=0x7f060046;
-        public static final int tv_news_time=0x7f060047;
-        public static final int tv_news_title=0x7f060044;
-        public static final int tv_show_tag=0x7f060048;
-        public static final int tv_temperature=0x7f06002e;
-        public static final int tv_today_date=0x7f060032;
-        public static final int tv_today_weather=0x7f06002d;
-        public static final int tv_tomorrom_wind=0x7f060021;
-        public static final int tv_tomorrow_day_temperature=0x7f06001d;
-        public static final int tv_tomorrow_night_temperature=0x7f06001e;
-        public static final int tv_tomorrow_night_weather=0x7f060020;
-        public static final int tv_tomorrow_weather=0x7f06001b;
-        public static final int tv_update_time=0x7f06002f;
-        public static final int tv_weather_wind=0x7f060030;
-        public static final int viewpage=0x7f060016;
-        public static final int webView=0x7f060033;
+        public static final int action_settings=0x7f06005e;
+        public static final int books=0x7f060016;
+        public static final int bt_button=0x7f06005d;
+        public static final int btn_line=0x7f06004b;
+        public static final int button1=0x7f060010;
+        public static final int capture_container=0x7f060008;
+        public static final int capture_crop_view=0x7f06000a;
+        public static final int capture_mask_bottom=0x7f06000c;
+        public static final int capture_mask_left=0x7f06000d;
+        public static final int capture_mask_right=0x7f06000e;
+        public static final int capture_mask_top=0x7f060009;
+        public static final int capture_preview=0x7f060007;
+        public static final int capture_scan_line=0x7f06000b;
+        public static final int decode=0x7f060001;
+        public static final int decode_failed=0x7f060002;
+        public static final int decode_succeeded=0x7f060003;
+        public static final int et_edit=0x7f06005c;
+        public static final int imageView1=0x7f060033;
+        public static final int imageview=0x7f06004e;
+        /**  ItemTouchHelper uses this id to save a View's original elevation. 
+         */
+        public static final int item_touch_helper_previous_elevation=0x7f060000;
+        public static final int iv_acquired_day_weather=0x7f060026;
+        public static final int iv_acquired_night_weather=0x7f060029;
+        public static final int iv_city_menu=0x7f06002c;
+        public static final int iv_erweima=0x7f060042;
+        public static final int iv_jokes_pic=0x7f06003b;
+        public static final int iv_pic=0x7f060058;
+        public static final int iv_picture=0x7f06003f;
+        public static final int iv_share=0x7f060039;
+        public static final int iv_share_apk=0x7f060044;
+        public static final int iv_today_weather=0x7f06002e;
+        public static final int iv_tomorrow_day_weather=0x7f06001e;
+        public static final int iv_tomorrow_night_weather=0x7f060021;
+        public static final int iv_weather=0x7f06003e;
+        public static final int iv_weather_share=0x7f06002d;
+        public static final int iv_welcome=0x7f060036;
+        public static final int joke_pic_show=0x7f060011;
+        public static final int jokes=0x7f060015;
+        public static final int linearLayout1=0x7f06001b;
+        public static final int listview=0x7f06004d;
+        public static final int ll_item1=0x7f060052;
+        public static final int ll_item2=0x7f060053;
+        public static final int ll_item_item3=0x7f060055;
+        public static final int ll_news_1=0x7f060047;
+        public static final int lv_joke=0x7f06003c;
+        public static final int lv_news_item=0x7f06004c;
+        public static final int more=0x7f060017;
+        public static final int movies=0x7f060014;
+        public static final int news=0x7f060013;
+        public static final int quit=0x7f060004;
+        public static final int restart_preview=0x7f060005;
+        public static final int return_scan_result=0x7f060006;
+        public static final int rg_control=0x7f060012;
+        public static final int rl_weather_bac=0x7f060019;
+        public static final int size=0x7f060050;
+        public static final int textView1=0x7f06003d;
+        public static final int textView2=0x7f060040;
+        public static final int textView3=0x7f060041;
+        public static final int textView4=0x7f060043;
+        public static final int textView5=0x7f060045;
+        public static final int time=0x7f060051;
+        public static final int title=0x7f06004f;
+        public static final int tv=0x7f06000f;
+        public static final int tv2=0x7f06003a;
+        public static final int tv_Acquired=0x7f060024;
+        public static final int tv_Tomorrow=0x7f06001c;
+        public static final int tv_acquired_day_temperature=0x7f060027;
+        public static final int tv_acquired_night_temperature=0x7f060028;
+        public static final int tv_acquired_night_weather=0x7f06002a;
+        public static final int tv_acquired_weather=0x7f060025;
+        public static final int tv_acquired_wind=0x7f06002b;
+        public static final int tv_county=0x7f06001a;
+        public static final int tv_item_time=0x7f060057;
+        public static final int tv_item_title=0x7f060054;
+        public static final int tv_item_title2=0x7f060056;
+        public static final int tv_jokes_author=0x7f060037;
+        public static final int tv_jokes_content=0x7f060038;
+        public static final int tv_news_source=0x7f060048;
+        public static final int tv_news_time=0x7f060049;
+        public static final int tv_news_title=0x7f060046;
+        public static final int tv_show_tag=0x7f06004a;
+        public static final int tv_temperature=0x7f060030;
+        public static final int tv_title=0x7f06005b;
+        public static final int tv_today_date=0x7f060034;
+        public static final int tv_today_weather=0x7f06002f;
+        public static final int tv_tomorrom_wind=0x7f060023;
+        public static final int tv_tomorrow_day_temperature=0x7f06001f;
+        public static final int tv_tomorrow_night_temperature=0x7f060020;
+        public static final int tv_tomorrow_night_weather=0x7f060022;
+        public static final int tv_tomorrow_weather=0x7f06001d;
+        public static final int tv_update_time=0x7f060031;
+        public static final int tv_weather_wind=0x7f060032;
+        public static final int viewpage=0x7f060018;
+        public static final int webView=0x7f060035;
+        public static final int weixin_ll=0x7f06005a;
+        public static final int wv=0x7f060059;
     }
     public static final class layout {
         public static final int activity_capture=0x7f030000;
         public static final int activity_code=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_picture=0x7f030003;
-        public static final int activity_weather=0x7f030004;
-        public static final int activity_webview=0x7f030005;
-        public static final int activity_welcome=0x7f030006;
-        public static final int booksfragment=0x7f030007;
-        public static final int jokes_item_show=0x7f030008;
-        public static final int jokesfragment=0x7f030009;
-        public static final int morefragment=0x7f03000a;
-        public static final int moviesfragment=0x7f03000b;
+        public static final int activity_joke_pic_show=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_picture=0x7f030004;
+        public static final int activity_weather=0x7f030005;
+        public static final int activity_webview=0x7f030006;
+        public static final int activity_welcome=0x7f030007;
+        public static final int booksfragment=0x7f030008;
+        public static final int jokes_item_show=0x7f030009;
+        public static final int jokesfragment=0x7f03000a;
+        public static final int morefragment=0x7f03000b;
         public static final int news_item_show=0x7f03000c;
         public static final int newsfragment=0x7f03000d;
-        public static final int newsfragment2=0x7f03000e;
-        public static final int share_apk_activity_main=0x7f03000f;
-        public static final int share_apk_item=0x7f030010;
+        public static final int share_apk_activity_main=0x7f03000e;
+        public static final int share_apk_item=0x7f03000f;
+        public static final int weixin_item_listview=0x7f030010;
+        public static final int weixin_webview_activity=0x7f030011;
+        public static final int weixinfragment=0x7f030012;
     }
     public static final class menu {
-        public static final int main=0x7f0a0000;
-        public static final int picture=0x7f0a0001;
-        public static final int share_apk=0x7f0a0002;
-        public static final int weather=0x7f0a0003;
-        public static final int webview=0x7f0a0004;
-        public static final int welcome=0x7f0a0005;
+        public static final int joke_pic_show=0x7f0a0000;
+        public static final int main=0x7f0a0001;
+        public static final int picture=0x7f0a0002;
+        public static final int share_apk=0x7f0a0003;
+        public static final int weather=0x7f0a0004;
+        public static final int webview=0x7f0a0005;
+        public static final int welcome=0x7f0a0006;
     }
     public static final class raw {
         public static final int beep=0x7f040000;
@@ -185,6 +251,7 @@ public final class R {
         public static final int action_settings=0x7f070001;
         public static final int app_name=0x7f070000;
         public static final int hello_world=0x7f070002;
+        public static final int title_activity_joke_pic_show=0x7f070008;
         public static final int title_activity_picture=0x7f070004;
         public static final int title_activity_share_apk=0x7f070007;
         public static final int title_activity_weather=0x7f070003;
@@ -219,4 +286,100 @@ public final class R {
          */
         public static final int AppTheme=0x7f090001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a RecyclerView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #RecyclerView_android_orientation android:orientation}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_layoutManager com.yanglijun.news_v1:layoutManager}</code></td><td> Class name of the Layout Manager to be used.</td></tr>
+           <tr><td><code>{@link #RecyclerView_reverseLayout com.yanglijun.news_v1:reverseLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_spanCount com.yanglijun.news_v1:spanCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_stackFromEnd com.yanglijun.news_v1:stackFromEnd}</code></td><td></td></tr>
+           </table>
+           @see #RecyclerView_android_orientation
+           @see #RecyclerView_layoutManager
+           @see #RecyclerView_reverseLayout
+           @see #RecyclerView_spanCount
+           @see #RecyclerView_stackFromEnd
+         */
+        public static final int[] RecyclerView = {
+            0x010100c4, 0x7f010000, 0x7f010001, 0x7f010002,
+            0x7f010003
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#orientation}
+          attribute's value can be found in the {@link #RecyclerView} array.
+          @attr name android:orientation
+        */
+        public static final int RecyclerView_android_orientation = 0;
+        /**
+          <p>
+          @attr description
+           Class name of the Layout Manager to be used.
+        <p/>
+        The class must extend android.support.v7.widget.RecyclerView$LayoutManager
+        and have either a default constructor or constructor with the signature
+        (android.content.Context, android.util.AttributeSet, int, int).
+         <p/>
+         If the name starts with a '.', application package is prefixed.
+         Else, if the name contains a '.', the classname is assumed to be a full class name.
+         Else, the recycler view package name (android.support.v7.widget) is prefixed. 
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name com.yanglijun.news_v1:layoutManager
+        */
+        public static final int RecyclerView_layoutManager = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.yanglijun.news_v1.R.attr#reverseLayout}
+          attribute's value can be found in the {@link #RecyclerView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.yanglijun.news_v1:reverseLayout
+        */
+        public static final int RecyclerView_reverseLayout = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.yanglijun.news_v1.R.attr#spanCount}
+          attribute's value can be found in the {@link #RecyclerView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.yanglijun.news_v1:spanCount
+        */
+        public static final int RecyclerView_spanCount = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.yanglijun.news_v1.R.attr#stackFromEnd}
+          attribute's value can be found in the {@link #RecyclerView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.yanglijun.news_v1:stackFromEnd
+        */
+        public static final int RecyclerView_stackFromEnd = 4;
+    };
 }

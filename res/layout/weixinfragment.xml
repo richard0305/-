@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+
+    <LinearLayout
+        android:id="@+id/weixin_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#c1ffc1"
+        android:layout_below="@+id/tv_title"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:paddingLeft="5dp"
+            android:id="@+id/et_edit"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:layout_weight="4"
+            android:hint="请输入关键字"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/bt_button"
+            android:layout_width="0dp"
+            android:layout_height="62dp"
+            android:layout_weight="0.99"
+            android:background="@null"
+            android:text="查询"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weixin_ll" >
+    </ListView>
+
+</RelativeLayout>

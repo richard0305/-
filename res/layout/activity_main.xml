@@ -31,7 +31,7 @@
             android:layout_weight="1"
             android:button="@null"
             android:gravity="center"
-            android:text="影讯"
+            android:text="热文"
             android:textColor="@drawable/color_item" />
 
         <RadioButton
@@ -51,7 +51,7 @@
             android:layout_weight="1"
             android:button="@null"
             android:gravity="center"
-            android:text="图书"
+            android:text="美图"
             android:textColor="@drawable/color_item" />
 
         <RadioButton

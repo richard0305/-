@@ -19,6 +19,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.yanglijun.news_v1.R;
 import com.yanglijun.news_v1.Fragment.JokesFragment;
+import com.yanglijun.news_v1.activity.JokePicShowActivity;
 import com.yanglijun.news_v1.entity.Joke;
 import com.yanglijun.news_v1.util.ZoomImageView;
 
@@ -50,7 +51,7 @@ public class JokesAdapter extends BaseAdapter {
 					.findViewById(R.id.tv_jokes_content);
 			holder.tvauthor = (TextView) convertView
 					.findViewById(R.id.tv_jokes_author);
-			holder.ivPic = (ZoomImageView) convertView
+			holder.ivPic = (ImageView) convertView
 					.findViewById(R.id.iv_jokes_pic);
 			convertView.setTag(holder);
 			holder.ivShare = (ImageView) convertView
@@ -74,15 +75,25 @@ public class JokesAdapter extends BaseAdapter {
 		DisplayImageOptions options = new DisplayImageOptions.Builder()
 				.cacheInMemory(true).cacheOnDisc(true).build();
 
-		String picUrl = joke.getPicUrl();// url
+		final String picUrl = joke.getPicUrl();// url
 
 		if (picUrl != null) {
 
 			ImageLoader.getInstance().displayImage(picUrl, holder.ivPic,
 					options);
-			// Glide.with(context).load(picUrl).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.ivPic);
 
 		}
+		
+		holder.ivPic.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent=new Intent(context, JokePicShowActivity.class);
+				intent.putExtra("picurl",picUrl);
+				context.startActivity(intent);
+				
+			}
+		});
 		return convertView;
 	}
 
@@ -99,7 +110,7 @@ public class JokesAdapter extends BaseAdapter {
 	class ViewHolder {
 		TextView tvauthor;
 		TextView tvContent;
-		ZoomImageView ivPic;
+		ImageView ivPic;
 		ImageView ivShare;
 	}
 

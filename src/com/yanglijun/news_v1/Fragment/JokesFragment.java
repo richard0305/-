@@ -62,8 +62,6 @@ public class JokesFragment extends Fragment {
 					break;
 				case SCROLL_STATE_IDLE:
 					if (isBottom) {
-						Toast.makeText(getActivity(), "已经到头了！",
-								Toast.LENGTH_SHORT).show();
 						handler.postDelayed(new  Runnable() {
 							public void run() {
 								

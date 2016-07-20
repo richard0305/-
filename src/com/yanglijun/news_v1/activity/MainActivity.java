@@ -24,10 +24,10 @@ import com.yanglijun.news_v1.R;
 import com.yanglijun.news_v1.Fragment.BooksFragment;
 import com.yanglijun.news_v1.Fragment.MoreFragment;
 import com.yanglijun.news_v1.Fragment.JokesFragment;
-import com.yanglijun.news_v1.Fragment.MoviesFragment;
 import com.yanglijun.news_v1.Fragment.NewsFragment;
 import com.yanglijun.news_v1.R.id;
 import com.yanglijun.news_v1.R.layout;
+import com.yanglijun.news_v1.weixin.WeixinFragment;
 
 public class MainActivity extends FragmentActivity {
 	private RadioGroup rgReader;
@@ -78,7 +78,7 @@ public class MainActivity extends FragmentActivity {
 	private void setViewPagerAdapter() {
 		fragments = new ArrayList<Fragment>();
 		fragments.add(new NewsFragment());
-		fragments.add(new MoviesFragment());
+		fragments.add(new WeixinFragment());
 		fragments.add(new JokesFragment());
 		fragments.add(new BooksFragment());
 		fragments.add(new MoreFragment());
