@@ -8,6 +8,8 @@ import com.yanglijun.news_v1.weixin.NewsModel.Callback;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -61,6 +63,33 @@ public class WeixinFragment extends Fragment implements OnClickListener{
 	}
 
 	private void setListeners() {
+		
+		
+		etEdit.addTextChangedListener(new TextWatcher() {
+			
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				if(s.length()>0){
+					btButton.setEnabled(true);
+				}else{
+					btButton.setEnabled(false);
+				}
+				
+			}
+			
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+				
+				
+			}
+			
+			@Override
+			public void afterTextChanged(Editable s) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
 		btButton.setOnClickListener(this);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -108,25 +137,26 @@ public class WeixinFragment extends Fragment implements OnClickListener{
 					new Runnable() {
 						public void run() {
 							try {
-								find();
+								String key = etEdit.getText().toString();
+								if(key==""){
+									Toast.makeText(getActivity(), "Ç×~¹Ø¼ü×ÖÍüÁË°Â£¡",Toast.LENGTH_SHORT).show();
+									return;
+								}else{
+									find();
+								}
+									
 							} catch (Exception e) {
 								e.printStackTrace();
 							}
-							
 						}
 					}).start();
-			
-			
 			break;
 		}
 	}
 
 	private void find() {
 			String key = etEdit.getText().toString();
-			if(key==""){
-				Toast.makeText(getActivity(), "Ç×~¹Ø¼ü×ÖÍüÁË°Â£¡",Toast.LENGTH_SHORT).show();
-				return;
-			}
+			
 			newsModel.search(key, new Callback() {
 
 				@Override

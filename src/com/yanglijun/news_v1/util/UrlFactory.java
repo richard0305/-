@@ -18,4 +18,15 @@ public class UrlFactory {
 		String newspath="http://api.1-blog.com/biz/bizserver/news/list.do";
 		return newspath;
 	}
+	
+	public static String getPictureListUrl(int page){
+		
+		String path="http://gank.io/api/data/%E7%A6%8F%E5%88%A9/20/"+page;
+		return path;
+		
+		
+		
+		
+		
+	}
 }

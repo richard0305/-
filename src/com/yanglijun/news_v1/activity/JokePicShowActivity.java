@@ -28,9 +28,11 @@ public class JokePicShowActivity extends Activity {
 		
 		ImageLoader.getInstance().displayImage(url, ivjokeshow,
 				options);
-		
-		
 	}
+	
+	
+	
+	
 	
 
 

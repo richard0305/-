@@ -10,5 +10,6 @@
     <string name="title_activity_welcome">阅享</string>
     <string name="title_activity_share_apk">ShareApkActivity</string>
     <string name="title_activity_joke_pic_show">JokePicShowActivity</string>
+    <string name="title_activity_about_us">AboutUsActivity</string>
 
 </resources>

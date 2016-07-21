@@ -10,19 +10,9 @@
         android:id="@+id/rg_control"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:background="#cbf3fb"
+        android:background="#3385FF"
         android:orientation="horizontal" >
 
-        <RadioButton
-            android:id="@+id/news"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:checked="true"
-            android:gravity="center"
-            android:text="新闻"
-            android:textColor="@drawable/color_item" />
 
         <RadioButton
             android:id="@+id/movies"
@@ -32,6 +22,7 @@
             android:button="@null"
             android:gravity="center"
             android:text="热文"
+            android:checked="true"
             android:textColor="@drawable/color_item" />
 
         <RadioButton

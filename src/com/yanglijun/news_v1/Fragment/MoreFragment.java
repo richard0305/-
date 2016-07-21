@@ -1,25 +1,23 @@
 package com.yanglijun.news_v1.Fragment;
 
+import com.yanglijun.news_v1.AboutUsActivity;
 import com.yanglijun.news_v1.R;
-import com.yanglijun.news_v1.activity.PictureActivity;
-import com.yanglijun.news_v1.activity.WeatherActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.TextView;
 import shareapk.view.ShareApkMainActivity;
 
 public class MoreFragment extends Fragment{
-	private ImageView ivWeather;
-	private ImageView ivPicture;
-	private ImageView iverweima;
-	private ImageView ivShareApk;
+	private TextView tverweima;
+	private TextView tvshareapk;
+	private TextView tvaboutus;
+	
 	
 	
 	@Override
@@ -33,7 +31,7 @@ public class MoreFragment extends Fragment{
 	
 	
 	private void setListener() {
-		iverweima.setOnClickListener(new OnClickListener() {
+		tverweima.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -42,7 +40,7 @@ public class MoreFragment extends Fragment{
 				
 			}
 		});
-		ivShareApk.setOnClickListener(new OnClickListener() {
+		tvshareapk.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -52,32 +50,24 @@ public class MoreFragment extends Fragment{
 			}
 		});
 		
+		tvaboutus.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent=new Intent(getActivity(), AboutUsActivity.class);
+				startActivity(intent);
+				
+			}
+		});
 		
 	}
-
 
 	private void setViews(View view) {
-		ivPicture=(ImageView) view.findViewById(R.id.iv_picture);
-		ivWeather=(ImageView) view.findViewById(R.id.iv_weather);
-		iverweima=(ImageView) view.findViewById(R.id.iv_erweima);
-		ivShareApk=(ImageView) view.findViewById(R.id.iv_share_apk);
+		tvaboutus=(TextView) view.findViewById(R.id.tv_aboutus);
+		tverweima=(TextView) view.findViewById(R.id.tv_erweima);
+		tvshareapk=(TextView) view.findViewById(R.id.tv_share_apk);
 	}
 
-
-	public void doClick(View view){
-		switch(view.getId()){
-		case R.id.iv_weather:
-			Intent intent3=new Intent(getActivity(),WeatherActivity.class);
-			startActivity(intent3);
-			break;
-			
-		case R.id.iv_picture:
-			Intent intent2=new Intent(getActivity(),PictureActivity.class);
-			startActivity(intent2);
-			break;
-		
-		}
-	}
 	
 	
 }

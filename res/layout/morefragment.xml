@@ -3,99 +3,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
+  
 
-    <TextView
-        android:id="@+id/textView1"
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#123456"
-        android:gravity="center"
-        android:text="更多娱乐"
+        android:layout_height="110dp"
+        android:orientation="horizontal"
+        >
+        
+    <TextView
+        android:id="@+id/tv_erweima"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="100dp"
+        android:background="#0FA6E9"
         android:textColor="#ffffff"
-        android:textSize="20sp" />
-
-    <ImageView
-        android:id="@+id/iv_weather"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:onClick="doClick"
-        android:padding="8dp"
-        android:src="@drawable/weather" />
-
-    <ImageView
-        android:id="@+id/iv_picture"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignTop="@+id/iv_weather"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/iv_weather"
-        android:onClick="doClick"
-        android:padding="8dp"
-        android:src="@drawable/picture" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/iv_weather"
-        android:layout_below="@+id/iv_weather"
-        android:gravity="center_horizontal"
-        android:text="天气预报" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/iv_picture"
-        android:layout_alignRight="@+id/iv_picture"
-        android:layout_below="@+id/iv_picture"
-        android:gravity="center_horizontal"
-        android:text="图库" />
-
-    <ImageView
-        android:id="@+id/iv_erweima"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_above="@+id/textView3"
-        android:layout_marginLeft="18dp"
-        android:layout_toRightOf="@+id/iv_picture"
-        android:padding="8dp"
-        android:onClick="doClick"
-        android:src="@drawable/details" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/iv_erweima"
-        android:layout_alignRight="@+id/iv_erweima"
-        android:layout_below="@+id/iv_erweima"
-        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="24sp"
+        android:gravity="center"
         android:text="二维码" />
 
-    <ImageView
-        android:id="@+id/iv_share_apk"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="18dp"
-        android:layout_toLeftOf="@+id/iv_picture"
-        android:onClick="doClick"
-        android:padding="8dp"
-        android:src="@drawable/shareapk" />
-
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/iv_share_apk"
-        android:layout_centerVertical="true"
-        android:layout_below="@+id/iv_share_apk"
-        android:gravity="center_horizontal"
+        android:id="@+id/tv_share_apk"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="100dp"
+        android:background="#0FA6E9"
+        android:textColor="#ffffff"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="24sp"
+        android:gravity="center"
         android:text="分享软件" />
+    
+    <TextView
+        android:id="@+id/tv_aboutus"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="100dp"
+        android:background="#0FA6E9"
+        android:textColor="#ffffff"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:text="关于软件" />
+        
+    </LinearLayout>
 
 </RelativeLayout>
