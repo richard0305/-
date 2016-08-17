@@ -51,7 +51,7 @@ public class WelcomeActivity extends Activity {
 	}
 
 	protected void returnToMain() {
-		startActivity(new Intent(this, MainActivity.class));
+		startActivity(new Intent(this, LoginActivity.class));
 		finish();
 
 	}

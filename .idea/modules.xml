@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/NEWS-v1.iml" filepath="$PROJECT_DIR$/.idea/NEWS-v1.iml" />
+      <module fileurl="file://D:/新的程序空间/recyclerview/recyclerview.iml" filepath="D:/新的程序空间/recyclerview/recyclerview.iml" />
+    </modules>
+  </component>
+</project>

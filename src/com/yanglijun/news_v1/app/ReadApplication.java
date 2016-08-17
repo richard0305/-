@@ -11,6 +11,7 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 
 import android.app.Application;
+import cn.bmob.v3.Bmob;
 
 /**
  * Created by yanglijun 2016-6-25ÏÂÎç4:13:46
@@ -41,9 +42,12 @@ public class ReadApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		readApplication = this;
+		// ³õÊ¼»¯Bmob¿ò¼Ü
+		Bmob.initialize(this, "8825ff7a88516874a1cc63057afedbd2");
 
 		context = this;
 		Queue = Volley.newRequestQueue(context);
+		
 
 		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
 				// .memoryCacheExtraOptions(480, 800)
